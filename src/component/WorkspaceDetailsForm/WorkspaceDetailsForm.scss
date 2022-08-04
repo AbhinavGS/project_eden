@@ -1,0 +1,17 @@
+.url-input {
+  display: flex;
+  .first {
+    // border: 1px solid red;
+    width: 40%;
+
+    #workspace-url-fixed {
+      width: 100%;
+      background-color: azure;
+      border-radius: 0 !important;
+    }
+  }
+  .second {
+    // border: 1px solid blue;
+    width: 60%;
+  }
+}
