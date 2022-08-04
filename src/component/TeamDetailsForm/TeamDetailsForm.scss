@@ -1,0 +1,12 @@
+.team-options-container {
+  display: flex;
+
+  .team-options-myself {
+    border: 1px solid forestgreen;
+    cursor: pointer;
+  }
+  .team-options-team {
+    border: 1px solid violet;
+    cursor: pointer;
+  }
+}

@@ -34,4 +34,12 @@
   .form-label {
     margin-bottom: -10px;
   }
+  .app__button-main {
+    background-color: #644ce3;
+    text-transform: none;
+
+    &:hover {
+      background-color: #574c8d;
+    }
+  }
 }

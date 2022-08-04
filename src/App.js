@@ -9,6 +9,7 @@ import {
   NameDetailsForm,
   WorkspaceDetailsForm,
   TeamDetailsForm,
+  SuccessScreen,
 } from "./component";
 
 const App = () => {
@@ -21,6 +22,7 @@ const App = () => {
     workspaceName: "",
     workspaceURL: "",
   });
+  const [teamDetails, setTeamDetails] = useState("myself");
 
   const changeStage = () => {
     setStage((prev) => prev + 1);
@@ -37,9 +39,9 @@ const App = () => {
           />
         );
       case 2:
-        return <TeamDetailsForm />;
+        return <TeamDetailsForm functions={[teamDetails, setTeamDetails]} />;
       default:
-        return <div>Something went wrong</div>;
+        return <SuccessScreen name={nameDetails.displayName} />;
     }
   };
 
@@ -63,11 +65,11 @@ const App = () => {
           />
           {getStageComponent(stage)}
           <Button
-            className="button-main"
+            className="app__button-main"
             variant="contained"
             onClick={changeStage}
           >
-            Create Workspace
+            {stage < 3 ? "Create Workspace" : "Launch Eden"}
           </Button>
         </Stack>
       </div>
