@@ -1,9 +1,8 @@
 .wrapper-div {
-  border: 1px solid red;
+  // border: 1px solid red;
   width: 35%;
   margin-top: 5% !important;
   margin: auto;
-  /*Solves a problem in which the content is being cut when the div is smaller than its' wrapper:*/
   max-width: 100%;
   max-height: 100%;
   overflow: auto;
@@ -29,7 +28,7 @@
     .app__logo-img {
       height: 3rem !important;
       width: 3rem !important;
-      border: 1px solid red;
+      // border: 1px solid red;
     }
     .app__logo-text {
       text-align: center;
@@ -81,10 +80,11 @@
   }
 
   .app__stepper {
-    border: 1px solid purple;
+    // border: 1px solid purple;
     padding: 2rem 3.5rem;
     button {
-      border: 1px solid;
+      box-shadow: 0px 0px 1px 1px rgba(170, 170, 170, 0.64);
+      cursor: default;
     }
     .connector-filled {
       border-color: #644ce3;
