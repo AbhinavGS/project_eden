@@ -21,27 +21,31 @@ const TeamDetailsForm = (props) => {
       </h6>
       <div className="team-options-container">
         <Box
-          className="team-options-myself"
+          className={
+            data === "myself"
+              ? `selected-team-tile team-options-myself`
+              : `team-options-myself`
+          }
           onClick={() => handleClick("myself")}
         >
-          <Stack>
-            <Box>
-              <BsPersonFill size={20} />
-              <h5>For Myself</h5>
-              <p>Write better. Think more clearly. Stay organized</p>
-            </Box>
+          <Stack spacing={1}>
+            <BsPersonFill size={20} className="team-icon" />
+            <h5>For Myself</h5>
+            <p>Write better. Think more clearly. Stay organized</p>
           </Stack>
         </Box>
         <Box
-          className="team-options-team"
+          className={
+            data === "withMyTeam"
+              ? `selected-team-tile team-options-team`
+              : `team-options-team`
+          }
           onClick={() => handleClick("withMyTeam")}
         >
-          <Stack>
-            <Box>
-              <RiTeamFill size={20} />
-              <h5>With my team</h5>
-              <p>Wikis, docs, tasks & projects, all in one place.</p>
-            </Box>
+          <Stack spacing={1}>
+            <RiTeamFill size={20} className="team-icon" />
+            <h5>With my team</h5>
+            <p>Wikis, docs, tasks & projects, all in one place.</p>
           </Stack>
         </Box>
       </div>

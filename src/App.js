@@ -59,9 +59,20 @@ const App = () => {
             <h2 className="app__logo-text">Eden</h2>
           </Stack>
           <Stepper
-            connectorStyleConfig={{ activeColor: "red", size: 2 }}
+            className="app__stepper"
+            connectorStyleConfig={{
+              activeColor: "red",
+              size: 2,
+              completedColor: "red",
+            }}
             steps={[{ label: "" }, { label: "" }, { label: "" }, { label: "" }]}
             activeStep={stage}
+            styleConfig={{
+              activeBgColor: "#644ce3",
+              completedBgColor: "#644ce3",
+              inactiveBgColor: "white",
+              inactiveTextColor: "grey",
+            }}
           />
           {getStageComponent(stage)}
           <Button

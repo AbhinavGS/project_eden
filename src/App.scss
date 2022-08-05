@@ -1,6 +1,6 @@
 .wrapper-div {
   border: 1px solid red;
-  width: 40%;
+  width: 35%;
   margin-top: 5% !important;
   margin: auto;
   /*Solves a problem in which the content is being cut when the div is smaller than its' wrapper:*/
@@ -8,9 +8,88 @@
   max-height: 100%;
   overflow: auto;
 
-  // @media screen and (max-width: 768px) {
-  //   width: 80%;
-  // }
+  @media screen and (max-width: 500px) {
+    //smartphones
+    padding-top: 10vh;
+    width: 100%;
+  }
+  @media screen and (min-width: 500px) and (max-width: 850px) {
+    //tablets
+    padding-top: 8vh;
+    width: 80%;
+  }
+  @media screen and (min-width: 850px) and (max-width: 1024px) {
+    padding-top: 5vh;
+    width: 50%;
+  }
+  @media screen and (min-width: 1500px) {
+    padding-top: 5vh;
+    width: 50%;
+
+    .app__logo-img {
+      height: 3rem !important;
+      width: 3rem !important;
+      border: 1px solid red;
+    }
+    .app__logo-text {
+      text-align: center;
+      font-size: 3rem;
+    }
+    .app__title {
+      font-size: 3rem !important;
+    }
+    .app__sub-title {
+      font-size: 1.5rem !important;
+    }
+    .input-container {
+      padding-top: 5%;
+      .form-label {
+        font-size: 1.5rem;
+        line-height: 2rem;
+      }
+      #full-name,
+      #display-name,
+      #workspace-name,
+      #workspace-url,
+      #workspace-url-fixed {
+        height: 2rem;
+        font-size: 1.5rem !important;
+      }
+    }
+    .team-options-container {
+      padding-top: 2%;
+      padding-bottom: 2%;
+      .team-options-myself,
+      .team-options-team {
+        height: 12rem;
+        width: 12rem;
+        h5 {
+          font-size: 1.3rem;
+        }
+        p {
+          font-size: 1.1rem;
+        }
+        .team-icon {
+          height: 2.5rem;
+          width: 2.5rem;
+        }
+      }
+    }
+    .app__button-main {
+      font-size: 1.5rem;
+    }
+  }
+
+  .app__stepper {
+    border: 1px solid purple;
+    padding: 2rem 3.5rem;
+    button {
+      border: 1px solid;
+    }
+    .connector-filled {
+      border-color: #644ce3;
+    }
+  }
 
   .app__logo-img {
     height: 1.5rem;
@@ -27,16 +106,20 @@
   .app__sub-title {
     margin-top: 2%;
     text-align: center;
-    font-size: 100%;
-    font-weight: 200;
-    color: gray;
+    font-size: 80%;
+    font-weight: 400;
+    color: slategray;
   }
   .form-label {
     margin-bottom: -10px;
+    font-size: 85%;
   }
+
   .app__button-main {
     background-color: #644ce3;
     text-transform: none;
+    width: 75%;
+    align-self: center;
 
     &:hover {
       background-color: #574c8d;
